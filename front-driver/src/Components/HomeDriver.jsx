@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { IoNavigateCircle } from 'react-icons/io5';
 import Map from './Map';
 import toast from 'react-hot-toast';
-import { RotatingLines } from 'react-loader-spinner';
+// import { RotatingLines } from 'react-loader-spinner';
+import { ClipLoader } from 'react-spinners';
 import SockJS from 'sockjs-client';
 import { Stomp } from '@stomp/stompjs';
 import { IoClose } from 'react-icons/io5';
@@ -446,7 +447,7 @@ const HomeDriver = () => {
               >
                 {!isOnline ? 'Go online' : 'Online'}
                 {loading ? (
-                  <RotatingLines
+                  <ClipLoader
                     strokeColor="white"
                     strokeWidth="5"
                     animationDuration="0.75"
