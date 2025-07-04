@@ -19,7 +19,7 @@ const LoginPageDriver = () => {
 
     setLoading(true);
 
-    fetch(`${BaseURI}:8080/driver/login/${email.trim()}`, {
+    fetch(`${BaseURI}/driver/login/${email.trim()}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'

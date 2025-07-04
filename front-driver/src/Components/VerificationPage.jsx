@@ -44,7 +44,7 @@ const VerificationPage = () => {
 
     setLoading(true);
 
-    fetch(`${BaseURI}:8080/${usertype}/login/verify-otp/${id}`, {
+    fetch(`${BaseURI}/${usertype}/login/verify-otp/${id}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

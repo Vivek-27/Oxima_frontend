@@ -137,7 +137,7 @@ const HomeDriver = () => {
   }, [trip]);
 
   const getCustomer = async ({ customerID }) => {
-    const res = await fetch(`${BaseURI}:8080/customer/${customerID}`);
+    const res = await fetch(`${BaseURI}/customer/${customerID}`);
     setCustomer(await res.json());
   };
 
@@ -146,7 +146,7 @@ const HomeDriver = () => {
     if (trip && user) {
       try {
         const res = await fetch(
-          `${BaseURI}:8080/customer/driver/respond?tripId=${trip.id}&driverId=${user.id}&accepted=${accepted}`,
+          `${BaseURI}/customer/driver/respond?tripId=${trip.id}&driverId=${user.id}&accepted=${accepted}`,
           {
             method: 'POST'
           }
@@ -245,7 +245,7 @@ const HomeDriver = () => {
 
   const cancleRide = () => {
     if (!ensureLoggedIn()) return;
-    fetch(`${BaseURI}:8080/trip/cancelTrip/${trip.id}/${user.id}`, {
+    fetch(`${BaseURI}/trip/cancelTrip/${trip.id}/${user.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
@@ -295,7 +295,7 @@ const HomeDriver = () => {
 
   const completeRide = () => {
     if (!ensureLoggedIn()) return;
-    fetch(`${BaseURI}:8080/trip/completeTrip/${trip.id}/${user.id}`, {
+    fetch(`${BaseURI}/trip/completeTrip/${trip.id}/${user.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'

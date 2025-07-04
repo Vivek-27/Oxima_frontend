@@ -41,7 +41,7 @@ const AuthDriver = () => {
       return;
     }
 
-    fetch(`${BaseURI}:8080/driver/create`, {
+    fetch(`${BaseURI}/driver/create`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

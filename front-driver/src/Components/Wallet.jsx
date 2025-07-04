@@ -7,9 +7,7 @@ const Wallet = () => {
   const user = userData ? JSON.parse(userData) : null;
   const getAllRides = async () => {
     try {
-      const response = await fetch(
-        `${BaseURI}:8080/trip/getAllRides/${user.id}`
-      );
+      const response = await fetch(`${BaseURI}/trip/getAllRides/${user.id}`);
 
       if (!response.ok) {
         throw new Error('Network response was not ok');
