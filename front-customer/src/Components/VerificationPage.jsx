@@ -48,16 +48,13 @@ const VerificationPage = () => {
     setLoading(true);
 
     try {
-      const res = await fetch(
-        `${BaseURI}:8080/${usertype}/login/verify-otp/${id}`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ inputOtp: fullOtp })
-        }
-      );
+      const res = await fetch(`${BaseURI}/${usertype}/login/verify-otp/${id}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ inputOtp: fullOtp })
+      });
 
       if (!res.ok) {
         const errorText = await res.text();

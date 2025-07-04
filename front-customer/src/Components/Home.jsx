@@ -232,7 +232,7 @@ const Home = () => {
     if (!ensureLoggedIn()) return;
     setLoader(true);
 
-    fetch(`${BaseURI}:8080/customer/requestRide2`, {
+    fetch(`${BaseURI}/customer/requestRide2`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -313,7 +313,7 @@ const Home = () => {
 
   const cancleRide = () => {
     if (!ensureLoggedIn()) return;
-    fetch(`${BaseURI}:8080/trip/cancelTrip/${trip.tripId}/${user.id}`, {
+    fetch(`${BaseURI}/trip/cancelTrip/${trip.tripId}/${user.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
@@ -341,7 +341,7 @@ const Home = () => {
     const fetchFare = async () => {
       if (!selectedSource || !selectedDestination) return;
       // or use distance from Map
-      const res = await fetch(`${BaseURI}:8080/trip/calculateFare`, {
+      const res = await fetch(`${BaseURI}/trip/calculateFare`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ distance: distance || 0 })
@@ -369,7 +369,7 @@ const Home = () => {
       return;
     }
 
-    const res = await fetch(`${BaseURI}:8080/payment/createOrder`, {
+    const res = await fetch(`${BaseURI}/payment/createOrder`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ tripId: trip.tripId, fare: estimatedFare }) // Send tripId and fair here
@@ -385,7 +385,7 @@ const Home = () => {
       description: 'Ride fare',
       order_id: data.orderId,
       handler: function (response) {
-        fetch(`${BaseURI}:8080/payment/verify`, {
+        fetch(`${BaseURI}/payment/verify`, {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -407,7 +407,7 @@ const Home = () => {
     const razor = new window.Razorpay(options);
     razor.on('payment.failed', function () {
       toast.error('Payment failed. Please try again.');
-      fetch(`${BaseURI}:8080/payment/updateStatus/${tripId}`, {
+      fetch(`${BaseURI}/payment/updateStatus/${tripId}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: 'retry' })

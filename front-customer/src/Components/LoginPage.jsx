@@ -26,7 +26,7 @@ const LoginPage = () => {
 
     setLoading(true);
     try {
-      const res = await fetch(`${BaseURI}:8080/customer/login/${email}`, {
+      const res = await fetch(`${BaseURI}/customer/login/${email}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
