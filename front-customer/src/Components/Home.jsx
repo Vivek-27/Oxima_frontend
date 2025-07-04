@@ -4,7 +4,7 @@ import { TiLocationArrow } from 'react-icons/ti';
 import { FaSquareFull } from 'react-icons/fa';
 import Map from './Map';
 import toast from 'react-hot-toast';
-import { RotatingLines } from 'react-loader-spinner';
+import { BarsLoader, GooeyCircleLoader } from 'react-loaders-kit';
 import { VscLoading } from 'react-icons/vsc';
 import { Stomp } from '@stomp/stompjs';
 import SockJS from 'sockjs-client';
@@ -420,14 +420,9 @@ const Home = () => {
   return (
     <div className=" w-full ">
       <div className="relative flex gap-20 justify-center">
-        <RotatingLines
-          strokeColor="black"
-          strokeWidth="5"
-          animationDuration="0.75"
-          width="75"
-          visible={loader}
-          className="absolute z-1000"
-        />{' '}
+        <div className={`absolute  top-40 z-1000 `}>
+          <GooeyCircleLoader loading={loader} color="#000000" size={100} />
+        </div>
         {driver ? (
           // ✅ If driver is assigned, show driver details and call option
           <div className="left bg-slate-50 p-10 w-[34vw]  rounded  flex flex-col gap-8">
