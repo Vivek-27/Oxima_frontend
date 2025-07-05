@@ -381,7 +381,7 @@ const Home = () => {
       key: 'rzp_test_YA24Th3tm6croN', // Replace with your Razorpay key
       amount: data.amount,
       currency: 'INR',
-      name: 'Uber Clone',
+      name: 'Oxima',
       description: 'Ride fare',
       order_id: data.orderId,
       handler: function (response) {
@@ -503,7 +503,7 @@ const Home = () => {
           // 🟡 If no driver and ride not yet requested → show request form
           <div className="left p-10 w-[34vw]">
             <div className="top mb-10 pr-16">
-              <h1 className=" text-5xl font-bold ">Go anywhere with Uber</h1>
+              <h1 className=" text-5xl font-bold ">Go anywhere with Oxima</h1>
               <p className=" text-2xl font-bold ">
                 {' '}
                 {distance ? <>{distance} km</> : '0 km'}

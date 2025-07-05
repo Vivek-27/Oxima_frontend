@@ -431,7 +431,7 @@ const HomeDriver = () => {
             <>
               <div className="top mb-10 pr-16">
                 <h1 className="text-black text-5xl font-bold">
-                  Go anywhere with Uber
+                  Go anywhere with Oxima
                 </h1>
               </div>
               <button
