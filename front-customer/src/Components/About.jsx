@@ -13,9 +13,9 @@ const About = () => {
           experience without the clutter — built with care by a solo developer.
         </p>
         <img
-          src="https://plus.unsplash.com/premium_photo-1731493915146-39417412c2e8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="/src/assets/logo.png"
           alt="Ride Booking"
-          className="mt-10 w-full max-w-4xl rounded-xl shadow-xl mx-auto"
+          className="mt-10 w-[800px] h-[350px] object-cover rounded-xl shadow-xl mx-auto"
         />
       </section>
 

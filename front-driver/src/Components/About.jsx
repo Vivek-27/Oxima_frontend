@@ -15,7 +15,7 @@ const About = () => {
         <img
           src="/src/assets/logo.png"
           alt="Ride Booking"
-          className="mt-10 w-full max-w-xl rounded-xl shadow-xl mx-auto"
+          className="mt-10 w-[800px] h-[350px] object-cover rounded-xl shadow-xl mx-auto"
         />
       </section>
 
