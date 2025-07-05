@@ -1,4 +1,5 @@
 import React from 'react';
+import image1 from '/src/assets/logo.png'; // Adjust the path as necessary
 
 const About = () => {
   return (
@@ -13,7 +14,7 @@ const About = () => {
           experience without the clutter — built with care by a solo developer.
         </p>
         <img
-          src="/src/assets/logo.png"
+          src={image1}
           alt="Ride Booking"
           className="mt-10 w-[800px] h-[350px] object-cover rounded-xl shadow-xl mx-auto"
         />

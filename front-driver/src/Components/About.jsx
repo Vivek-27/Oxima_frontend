@@ -1,5 +1,5 @@
 import React from 'react';
-
+import image1 from '/src/assets/logo.png'; // Adjust the path as necessary
 const About = () => {
   return (
     <div className="px-6 md:px-20 py-12 bg-white text-gray-800 space-y-24">
@@ -13,7 +13,7 @@ const About = () => {
           experience without the clutter — built with care by a solo developer.
         </p>
         <img
-          src="/src/assets/logo.png"
+          src={image1}
           alt="Ride Booking"
           className="mt-10 w-[800px] h-[350px] object-cover rounded-xl shadow-xl mx-auto"
         />
