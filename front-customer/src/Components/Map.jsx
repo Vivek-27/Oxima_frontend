@@ -58,7 +58,7 @@ const Map = ({ coordinates, setDistance }) => {
 
   // Blue dot icon for source location
   const blueDotIcon = new L.Icon({
-    iconUrl: '/src/assets/location_marker_.png',
+    iconUrl: '/public/location_marker_.png',
     iconSize: [40, 40], // width, height
     iconAnchor: [15, 22], // anchor point for marker position
     popupAnchor: [0, -30], // anchor point for popup
@@ -70,7 +70,7 @@ const Map = ({ coordinates, setDistance }) => {
 
   // Customer icon for midpoint location
   const customerIcon = new L.Icon({
-    iconUrl: '/src/assets/location-11-512.webp',
+    iconUrl: '/public/location-11-512.webp',
     iconSize: [45, 45], // width, height
     iconAnchor: [25, 40], // anchor point for marker position
     popupAnchor: [0, -30], // anchor point for popup
