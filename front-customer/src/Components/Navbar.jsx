@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { BiChevronDown } from 'react-icons/bi';
 import {
+  IoCarSportSharp,
   IoHelpCircle,
   IoLogOut,
   IoPerson,
@@ -132,10 +133,15 @@ const Navbar = () => {
           <Link to="/rides">
             <li className="hover:underline">Ride</li>
           </Link>
-
           <Link to={'/about'} className="flex items-center gap-1">
             About <BiChevronDown />
-          </Link>
+          </Link>{' '}
+          <a
+            href="https://oximadriver.netlify.app/"
+            className="flex items-center gap-2 justify-center"
+          >
+            Captin Page
+          </a>
         </ul>
       </div>
 

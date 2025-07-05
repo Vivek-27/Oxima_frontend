@@ -167,10 +167,15 @@ const Navbar = () => {
           <Link to="/rides">
             <li className="hover:underline">Ride</li>
           </Link>
-
           <Link to={'/about'} className="flex items-center gap-1">
             About <BiChevronDown />
-          </Link>
+          </Link>{' '}
+          <a
+            href="https://oximacustomer.netlify.app/"
+            className="flex items-center gap-1"
+          >
+            Rider Page
+          </a>
         </ul>
       </div>
 

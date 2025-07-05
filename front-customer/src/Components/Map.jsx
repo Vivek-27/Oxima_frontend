@@ -10,6 +10,8 @@ import {
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import locatioMarker from '/public/location_marker_.png';
+import locationMarker2 from '/public/location-11-512.webp';
 
 // Fix marker icons
 delete L.Icon.Default.prototype._getIconUrl;
@@ -58,7 +60,7 @@ const Map = ({ coordinates, setDistance }) => {
 
   // Blue dot icon for source location
   const blueDotIcon = new L.Icon({
-    iconUrl: '/public/location_marker_.png',
+    iconUrl: locatioMarker,
     iconSize: [40, 40], // width, height
     iconAnchor: [15, 22], // anchor point for marker position
     popupAnchor: [0, -30], // anchor point for popup
@@ -70,7 +72,7 @@ const Map = ({ coordinates, setDistance }) => {
 
   // Customer icon for midpoint location
   const customerIcon = new L.Icon({
-    iconUrl: '/public/location-11-512.webp',
+    iconUrl: locationMarker2,
     iconSize: [45, 45], // width, height
     iconAnchor: [25, 40], // anchor point for marker position
     popupAnchor: [0, -30], // anchor point for popup
